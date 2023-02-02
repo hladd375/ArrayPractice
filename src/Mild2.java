@@ -22,7 +22,10 @@ public class Mild2 {
         /***
          * Your code goes here
          */
-
+        for (int i = 0; i < a.length; i++){
+            mean = mean + a[i];
+        }
+        mean = mean/a[a.length-1];
         System.out.println("The mean is " + mean);
 
     }

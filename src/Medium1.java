@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /***
  * Goal: Determine and print the median of array "a"
  * Rating: MEDIUM
@@ -7,6 +9,7 @@ public class Medium1 {
 
     public int[] a;
     public int median;
+    public boolean even = true;
 
     public static void main(String[] args) {
         Medium1 practice = new Medium1();
@@ -22,6 +25,21 @@ public class Medium1 {
         /***
          * Your code goes here
          */
+
+        Arrays.sort(a);
+        if(a.length % 2 > 0) {
+            even = true;
+
+        }
+
+        if(a.length % 2 == 0) {
+            even = false;
+            median = a[a.length/2];
+
+        }
+
+
+
 
         System.out.println("The median is " + median);
 
